@@ -1,0 +1,18 @@
+.form {
+  width: 50%;
+}
+form input {
+  width: 80%;
+  padding: 7px;
+  margin-bottom: 15px;
+}
+textarea {
+  width: 80%;
+  height: 80px;
+}
+form button {
+  background-color: #0f673a;
+  color: white;
+  border: none;
+  padding: 10px;
+}
