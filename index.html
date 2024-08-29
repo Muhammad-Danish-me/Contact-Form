@@ -2,55 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Contact Messages | Firebase</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
+
   <body>
-    <div class="form">
-      <h4 class="bold-text">Get in touch using the form below</h4>
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="4d39dcc0-0936-42b8-a958-0e58cabddc10">
-        <label for="fullname"> Full Name * </label> <br />
-        <input
-          type="text"
-          id="fullname"
-          name="full-name"
-          required
-          class="light-weight"
-        />
-        <br />
-        <label for="email"> Email * </label><br />
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          class="light-weight"
-        />
-        <br />
-        <label for="phonenumber"> Phone Number *</label> <br />
-        <input
-          type="tel"
-          id="phonenumber"
-          required
-          name="phone-number"
-          class="light-weight"
-        />
+    <div class="container">
+      <form action="" id="contactForm">
+        <div class="alert">Your message sent</div>
 
-        <br />
-        <label for="message"> Message * </label><br />
-        <textarea
-          name="message"
-          class="light-weight"
-          id="message"
-          required
-        ></textarea>
+        <div class="inputBox">
+          <input type="text" id="name" placeholder="Your name...." />
+        </div>
 
-        <br />
-        <button type="submit">Send Message</button>
+        <div class="inputBox">
+          <input type="email" id="emailid" placeholder="Your Email....." />
+        </div>
+
+        <div class="inputBox">
+          <textarea
+            id="msgContent"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+        </div>
+
+        <div class="inputBox">
+          <button type="submit">Submit</button>
+        </div>
       </form>
     </div>
-    <script src="app.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./mail.js"></script>
   </body>
 </html>
